@@ -1,5 +1,6 @@
 # ecommerce_api/settings.py
 import os
+import dj_database_url
 from pathlib import Path
 
 # Base directory
@@ -11,7 +12,7 @@ SECRET_KEY = 'your-secret-key'
 # Debug mode
 DEBUG = False  # Set to False in production
 
-ALLOWED_HOSTS = ['*']  # Update as per deployment
+ALLOWED_HOSTS = ['ecommerce-api-2024.herokuapp.com', '127.0.0.1']  # Update as per deployment
 
 # Installed apps
 INSTALLED_APPS = [
