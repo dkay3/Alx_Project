@@ -1,1 +1,1 @@
-web: gunicorn ecommerce-api-2024.wsgi
+web: gunicorn ecommerce_api_2024.wsgi
