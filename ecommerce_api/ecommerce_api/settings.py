@@ -10,9 +10,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'your-secret-key'
 
 # Debug mode
-DEBUG = False  # Set to False in production
+DEBUG = True  # Set to False in production
 
-ALLOWED_HOSTS = ['ecommerce-api-2024.herokuapp.com', '127.0.0.1']  # Update as per deployment
+ALLOWED_HOSTS = ['ecommerce-api-2024.herokuapp.com', '127.0.0.1', 'localhost']  # Update as per deployment
 
 # Installed apps
 INSTALLED_APPS = [
@@ -117,6 +117,9 @@ REST_FRAMEWORK = {
         'django_filters.rest_framework.DjangoFilterBackend',
         'rest_framework.filters.SearchFilter',
         'rest_framework.filters.OrderingFilter',
+    ),
+     'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
     ),
 }
 

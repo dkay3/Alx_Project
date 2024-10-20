@@ -7,6 +7,12 @@ from .models import Category, Product
 from .serializers import UserSerializer, CategorySerializer, ProductSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
 from django_filters.rest_framework import DjangoFilterBackend
+from django.http import HttpResponse
+
+
+
+def landing_page_view(request, *args, **kwargs):
+    return HttpResponse("Welcome to the landing page!")
 
 class UserViewSet(viewsets.ModelViewSet):
     """
@@ -64,3 +70,4 @@ class ProductViewSet(viewsets.ModelViewSet):
 
         serializer = self.get_serializer(filtered, many=True)
         return Response(serializer.data)
+
